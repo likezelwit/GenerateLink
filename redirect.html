@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Redirecting...</title>
+<script>
+window.onload = () => {
+  const p = new URLSearchParams(location.search);
+  const u = p.get("u");
+  if(u){
+    location.href = decodeURIComponent(u);
+  } else {
+    document.body.innerHTML = "<h3>No URL provided.</h3>";
+  }
+};
+</script>
+</head>
+<body>
+<h3>Redirecting...</h3>
+</body>
+</html>
